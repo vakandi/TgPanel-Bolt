@@ -9,11 +9,11 @@ import './index.css'
 
 ReactDOM.createRoot(document.getElementById('root')!).render(
   <React.StrictMode>
-    <BrowserRouter basename="/">
+    <BrowserRouter>
       <Routes>
         <Route path="/auth" element={<Auth />} />
         <Route element={<Layout />}>
-          <Route path="/" element={<Orders />} />
+          <Route index element={<Orders />} />
           <Route path="/orders" element={<Orders />} />
           <Route path="/wallet" element={<Wallet />} />
         </Route>

@@ -7,7 +7,7 @@ export default function DepositForm({ onDeposit }: {
   const { register, handleSubmit, formState: { errors } } = useForm()
 
   return (
-    <form onSubmit={handleSubmit(data => onDeposit(Number(data.amount))} className="space-y-6">
+    <form onSubmit={handleSubmit((data) => onDeposit(Number(data.amount)))} className="space-y-6">
       <div>
         <label className="block text-sm font-medium mb-2">Amount</label>
         <input

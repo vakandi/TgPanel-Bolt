@@ -6,7 +6,11 @@ export default defineConfig({
   server: {
     port: 3000,
     strictPort: true,
-    host: true
+    host: true,
+    historyApiFallback: {
+      disableDotRule: true,
+      rewrites: [{ from: /\/.*/, to: '/index.html' }]
+    }
   },
   base: '/',
   build: {
